@@ -63,9 +63,6 @@ def plotly_two(col_name,data):
 	fig.update_yaxes(title_text="<b>Sepsis Onset</b>", secondary_y=True)
 	st.plotly_chart(fig)
 
-
-
-
 #main call
 def main():
 	st.title('ICU Patient Septic Shock Detection and Data Explorer')
@@ -98,13 +95,15 @@ def main():
 		* Ensure Data Input format is correct! If attaching your own csv file, ensure file is in same.
 		* Demo application data available here on my [Github Repo](https://raw.githubusercontent.com/janmichael88/Sepsis_Detection/master/DemoTestSepsis.csv)
 		* Upload your own sensor data, or use the sample provided.
+		* paste this link for testing: https://raw.githubusercontent.com/janmichael88/Sepsis_Detection/master/DemoTestSepsis.csv
 		''')
 	try:
-		user_input = st.text_input("Path to csv file")
-		data = pd.read_csv(user_input,index_col=0,encoding='utf-8')
+		user_input = st.text_input('')
+		data=pd.read_csv(user_input,index_col=0,encoding='utf-8')
 		st.write(data)
 	except FileNotFoundError:
-		pass
+		pass	
+	
 
 	#Preoprcess Section
 	st.header("PREPROCESS SENSOR DATA")
