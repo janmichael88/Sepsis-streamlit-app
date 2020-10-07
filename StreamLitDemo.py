@@ -2,11 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from keras.models import load_model
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-
-
 
 #CACHE FUNCTIONS
 @st.cache
